@@ -1,0 +1,406 @@
+Swikar Ramdam
+PURBEI045;
+
+
+
+//20)WAP to display the n terms of square natural numbers and their sum.
+
+
+#include<stdio.h>
+
+int main()
+{
+int i,s;
+printf("Enter the value of n\n");
+scanf("%d",&s);
+for(i=1;i<=s;i++){
+	printf("%d\n",i*i);
+}
+
+    return 0;
+}
+//19)WAP to read +ve integer and determine and print its binary equivalent.
+
+
+#include<stdio.h>
+
+int main()
+{
+    int n, i, sum = 0, x =1;
+
+    printf("Enter the number:");
+    scanf("%d",&n);
+
+    for(i=1;i>0;i++)
+    {
+       sum = sum + x * (n%2);
+        n = n/2;
+        x = x * 10;
+
+
+        if (n == 0)
+        break;
+    }
+
+    printf("The binary form is :%d",sum);
+
+    return 0;
+}
+18)WAP to find the sum of series : 1+11+111+1111+......+n
+
+#include<stdio.h>
+
+int main()
+{
+    int n, i, z, sum = 0, m = 0;
+
+    printf("Enter the value of nth series:");
+    scanf("%d",&n);
+
+    for(i=n;i>0;i--)
+    {
+        for (z = i;z>0;z--)
+        {
+            sum = sum*10 + 1;
+        }
+        m = m + sum; 
+    }
+    printf("The sum of the series is :%d",m);
+
+    return 0;
+}
+17)WAP a program to check wheather a given number is palindrome or not.
+
+
+#include<stdio.h>
+
+int main()
+{
+    int n, i, z, a, sum = 0;
+
+    printf("Enter the number:");
+    scanf("%d",&n);
+
+    z = n;
+    for(i=1;i<10;i++)
+    {
+        a = n%10;
+        sum = sum*10 + a;
+        n = n/10;
+        if(n == 0)
+        break;
+
+    }
+
+    if (z == sum)
+    printf("It's a palindrome number.");
+
+    else
+    printf("\nIt's not a palindrome number.");
+
+    return 0;
+}
+
+
+16)WAP to read a number and find its HCF and LCM.
+
+#include <stdio.h>
+int main() {
+  int a, b, x, y, t, gcd, lcm;
+
+  printf("Enter two integers\n");
+  scanf("%d%d", &x, &y);
+
+  a = x;
+  b = y;
+
+  while (b != 0) {
+    t = b;
+    b = a % b;
+    a = t;
+  }
+
+  gcd = a;
+  lcm = (x*y)/gcd;
+
+  printf("Greatest common divisor of %d and %d = %d\n", x, y, gcd);
+  printf("Least common multiple of %d and %d = %d\n", x, y, lcm);
+
+  return 0;
+}
+15)WAP to read a number and reverse it.
+
+
+ #include<stdio.h>
+
+int main()
+{
+    int n, i, a, sum = 0;
+
+    printf("Enter the number:");
+    scanf("%d",&n);
+
+    for(i=1;i<10;i++)
+    {
+        a = n%10;
+        sum = sum*10 + a;
+        n = n/10;
+        if(n == 0)
+        break;
+
+    }
+    printf("The reverse number is : %d",sum);
+
+    return 0;
+}
+//14.WAP to read values from the user and find the sum of given numbers until the users enters 0 and also find its average
+
+#include <stdio.h>
+#include <conio.h>
+int main(){
+	float num,sum = 0;
+	printf("Enter the positive numbers to add (0 to stop) \n");
+	scanf("%f",&num);
+	while(num>0){
+		sum += num;
+		scanf("%f",&num);//stores every new positive numbers as num
+	}
+	printf("The sum is : %f",sum);
+
+	printf("Average = %2f",sum/num);
+	
+	
+	return 0;
+ }
+13)WAP to find the sum of series. 1 + 2/2^2 + 3/3^3 + 4/4^4..........n/n^n.
+
+
+#include<stdio.h>
+
+ int main()
+ {
+     float n, a, b, m=1, s = 0;
+
+     printf("Enter the value of n for the series of (1 + 2/2^2 + 3/3^3 + 4/4^4..........n/n^) :");
+     scanf("%f",&n);
+
+     for (n = n;n>0;n--)
+     {
+         for(b = n;b>0;b--)
+         {
+             m = m * n;
+         }
+         s = s + n/m;
+     }
+     printf("\nThe sum of the series :%f",s);
+
+     return 0;
+ }
+
+
+12)Two numbers are entered through the keyboard. Write a program to find the value of one
+   number raised to the power of another.
+
+
+#include<stdio.h>
+
+ int main()
+ {
+     int a, m = 1;
+
+     printf("Enter the number to calculate it's factorial :");
+     scanf("%d",&a);
+
+     for (a = a;a>0;a--)
+     {
+         m = m *a;
+     }
+     printf("\nTfactorial of given number is :%d",m);
+
+     return 0;
+ }
+
+11)WAP to read a number and calculate it's factorial.
+
+#include<stdio.h>
+
+ int main()
+ {
+     int a, m = 1;
+
+     printf("Enter the number to calculate it's factorial :");
+     scanf("%d",&a);
+
+     for (a = a;a>0;a--)
+     {
+         m = m *a;
+     }
+     printf("\nThe factorial of given number is :%d",m);
+
+     return 0;
+ }
+
+
+//10.WAP to read n different numbers and display the sum
+#include <stdio.h>
+int main(){
+	int i,num,sum;
+	printf("Enter the number:\n");
+	scanf("%d",&num);
+	for(i=0; i<=num; i++){
+		sum +=i;
+	}
+		printf("The required sum is  %d ! \n ",sum);
+	
+	return 0;
+}
+//9.WAP to display all the characters and the ascii values whose ascii value ranges from 1 to 255
+#include <stdio.h>
+
+int main(){
+    int  i;
+    for(i=1;i<=300;i++){
+    	printf("The ASCII value %d is %c\n",i,i);
+}
+return 0;
+	}
+//8.Wap to print multiple of 5 from 1 to 10
+#include <stdio.h>
+
+int main(){
+int i;
+	for(i=1;i<=10;i++){
+	
+		printf(" 5 X %d = %d\n",i,5*i);
+	}
+	return 0;
+}
+//7.WAP to display Fibonacci series upto n terms. (0 1 1 2 3 5 8 13.....)
+#include <stdio.h>
+int main () {
+	int i,a,b,c,n;
+	printf("Enter a number:\n");
+	scanf("%d",&n);
+	for(i=1; i<=n; i++){
+		printf("%d\n",c);
+		a=b;
+		b=c;
+		c=a+b;
+	}
+	return 0;
+}
+//6.WAP to display all the 3 Armstrong numbers between 1 to 500
+#include <stdio.h>  
+      
+    int main()  
+    {  
+        int num, count = 1, rem, sum;  
+      
+        while(count <= 500)  
+        {  
+            num = count;  
+            sum = 0;  
+      
+            while(num)  
+            {  
+                rem = num % 10;  
+                sum = sum + (rem * rem * rem);  
+                num = num / 10;  
+            }  
+      
+            if(count == sum)  
+            {  
+                printf("%d is an Armstrong number\n", count);  
+            }  
+      
+            count++;  
+        }  
+      
+         return 0;  
+} 
+
+5.WAP to read a number and check whether it is prime or not.
+#include <stdio.h>
+int main()
+{
+	int a;
+	int i;
+	int prime = 0;
+
+	printf("Enter a number:");
+	scanf("%d\n", &a);
+
+	for (i = 2; i < a; i++)
+	{
+		if (a % i == 0 ) /* more than 1 conditional syntax in if inside 
+		for doesn't work.Therefore we need prime=0 things */
+		{
+			prime = 0;
+			break;
+		}
+	}
+	if (prime == 0 && a != 2)
+	{
+		printf("%d is not a prime number", a);
+	}
+	else
+	{
+		printf("%d is a prime number", a);
+	}
+
+return 0;
+}
+
+4.WAP to print odd numbers from 200 to 250.
+#include <stdio.h>
+
+int main(){
+    int i;
+    for(i=201; i <=250; i+= 2){
+        printf("%d\n", i);
+        
+    }
+    return 0;
+}
+3)WAP to calculate the sum of cube of number from 1 to 100.
+
+#include<stdio.h>
+
+int main()
+{
+    int i, sum=0;
+    while(i!=100)
+    {
+        sum = sum + i*i*i;
+        i++;
+    }
+    printf("The sum  of cube of numbers from 1 to 100 is %d",sum);
+    return 0;
+}
+
+
+//2.wap to calculate the sum of numbers from 1 to 100;
+
+#include <stdio.h>
+int main() {
+    int i, sum = 0;
+
+
+    for (i = 1; i <= 100; ++i) {
+        sum += i;
+    }
+
+    printf("Sum = %d", sum);
+    return 0;
+}
+//1.wap to read numbers from 25 t0 150;
+
+#include <stdio.h>
+int main(){
+    int i;
+    for(i=25; i <= 150; i++){
+        printf("%d\n", i);
+        
+    }
+    return 0;
+}

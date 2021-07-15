@@ -1,0 +1,282 @@
+Name Swikar Ramdam;
+PURBEI077-045;
+
+// 7.wap to read and operate two numbers;
+// Using switch
+#include <stdio.h>
+#include <math.h>
+int main ()
+{
+    int a,b,c;
+    printf("Enter first number:\n");
+    scanf("%d",&a);
+    printf("Enter second number:\n");
+    scanf("%d",&b);
+    printf("Choose the arithmetic operator: \n1= + \n2= - \n3= * \n4= / \n\n: ");
+    scanf("%d",&c);
+
+    switch (c)
+     {
+     case 1 : printf("%d", a + b);
+     break;
+     case 2 : printf("%d", a - b);
+     break;
+     case 3 : printf("%d", a * b);
+     break;
+     case 4 : printf("%d", a / b);
+     break;
+     default :
+     printf("Invalid Input !");
+     break;
+    }
+     return 0;
+}
+// Using else if
+
+#include <stdio.h>
+#include <math.h>
+int main (){
+    char ch;
+    int a,b;
+    
+    printf("Enter two numbers:\n");
+    scanf("%d%d",&a,&b);
+    printf("Enter the arithmetic operator:\n");
+    scanf("%s",&ch);
+
+    if (ch == '+' ){
+        printf("The sum is %d ", a+b );
+    }
+    else if (ch == '-' ){
+        printf("The difference is %d ", a-b );
+    }
+    else if (ch == '*' ){
+        printf("The product is %d ", a*b );
+    }
+   else if (ch == '/' ){
+        printf("The quotient is %d ", a/b );
+    }
+    return 0;
+}
+
+    // wap to check armstrong number;
+#include <stdio.h>
+int main(){
+	int num,remainder,result= 0;
+	printf("Enter a 3 digit number:\n");
+	scanf("%d",&num);
+	if (num !=0){
+	 remainder = num % 10;
+	 result += remainder * remainder * remainder;
+	 num /= 10;}
+    if(result == num)
+      printf("%d is an Armstrong number !");
+    else 
+    printf("%d is not an armstrong number");
+    return 0;
+	}
+
+// 2.wap to convert an alphabet in uppercase to lowercase and vice versa
+#include <stdio.h>
+int main (){
+    // 97-122 = a-z || 65-90 A-Z ||Ascii values American Standard Code for information interchange
+    char c;
+    printf("Enter the character:\n");
+    scanf("%c",&c);
+    if (c>=97 && c<=122){
+        printf("%c",c - 32);
+    }
+    else if (c>=65 && c<=90) {
+        printf("%c",c + 32);
+    }
+    return 0;
+}
+
+//1. wap to read 3 numbers and detect the middle one;
+
+#include <stdio.h>
+int main()
+{ int a,b,c;
+
+    printf("Enter 1st number:\n");
+    scanf("%d",&a);
+    printf("Enter 2nd number:\n");
+    scanf("%d",&b);
+    printf("Enter 3rd number:\n");
+    scanf("%d",&c);
+
+  if((a>b && b>c) || (c>b && b>a)){
+      printf("The middle number is %d :", b);
+  }
+  if((b>a && a>c) || (c>a && a>b)){
+      printf("The middle number is %d :", a);
+  }
+  if((a>c && c>b) || (b>c && c>a)){
+      printf("The middle number is %d :", c);
+  }
+   return 0;
+}
+
+// 3.wap to read year and check for the leap year;
+
+
+# include <stdio.h>
+int main ()
+{
+    int l;
+    printf("Enter a year:\n");
+    scanf("%d",&l);
+
+    if (l % 4 == 0)
+    { 
+        if (l % 400 == 0)
+        {
+            printf("The year is a leap year");
+        }
+        else 
+        printf("The year is not a leap year");
+    }
+    else {
+        printf("The year is not a leap year");
+    }
+    return 0;
+}
+
+// 8.wap to read percentage and print corresponding division;
+#include <stdio.h>
+int main (){
+    int p;
+    
+    printf("Enter your percentage:\n");
+    scanf("%d",&p);
+
+    if (p>80){
+    printf("Distinction");
+    }
+    else if (p>=60 && p<80){
+    printf("First division");
+    }
+    else if (p>=50 && p<60){
+    printf("Second Division");
+    }
+    else if (p>=40 && p<50){
+    printf("Third Division");
+    }
+    else if (p<40){
+    printf("Fail");
+    }
+
+    return 0;
+    
+    }
+// using switch
+    
+#include <stdio.h>
+int main (){
+    int p;
+    
+    printf("Enter your percentage:\n");
+    scanf("%d",&p);
+    switch(p/10){
+        case 10:case 9:case 8:
+        printf("Distinction !");
+        break;
+        case 7:case6:
+        printf("First division !");
+        break;
+        case 5:case4:
+        printf("Third division !");
+        break;
+        default:
+        printf("Fail !");
+        break;
+    }
+    return 0;
+    }
+
+4.WAP to find all possible roots of a quadratic equation ax2 + bx + c =0. 
+void main() 
+{ 
+ double a,b,c,d,r1,r2; 
+ printf("Enter coefficients a b and c:\n"); 
+ scanf("%lf%lf%lf",&a,&b,&c); 
+ d=(b*b-4*a*c);  //condition for real and different roots 
+ if (d>0) 
+ { 
+ r1=(-b+sqrt(d))/(2*a); 
+ r2=(-b-sqrt(d))/(2*a); 
+ printf("The possible roots are %lf and %lf",r1,r2); 
+ } 
+ //condition for real and equal roots 
+ else if (d==0) 
+ { 
+ r1=r2=-b/(2*a); 
+ printf("The possible root is %lf",r1); 
+ } 
+ //condition for imaginary roots 
+ else if (d<0) 
+ { 
+ r1=-b/(2*a); 
+ r2=sqrt(-d/(2*a)); 
+ printf("Real part of root is %lf and imaginary part of root is %lf",r1,r2); 
+ } 
+ getch(); 
+} 
+
+
+// Wap to calculate electricity bill for domestic consumers;
+
+#include <stdio.h>
+int main (){
+    int u;
+
+    printf("Enter the units:\n");
+    scanf("%d",&u);
+
+    if (u>=0 && u<=20) {
+        printf("Total Charge: %d\n",u*3);
+    }
+    else if (u>=21 && u<=30) {
+        printf("Total Charge: %d\n",u*7);
+    }
+    else if (u>=31 && u<=50) {
+        printf("Total Charge: %d\n",u*8.5);
+    }
+    else if (u>=51 && u<=150) {
+        printf("Total Charge: %d\n",u*10);
+    }
+    else if (u>=151 && u<=250) {
+        printf("Total Charge: %d\n",u*11);
+    }
+    else 
+        printf("Invalid Unit !");
+      return 0;
+
+    }
+
+
+5.WAP to calculate the area of a triangle given the length of its sides. 
+#include<stdio.h> 
+#include<conio.h> 
+#include<math.h> 
+void main() 
+{ 
+ float a,b,c,s,area; 
+ printf("Enter three sides of a triangle:\n"); 
+ scanf("%f%f%f",&a,&b,&c); 
+ s=(a+b+c)/2; 
+ if ( ((a+b)>c) && ((a+c)>b) && ((b+c)>a) ) 
+ { 
+ area=sqrt(s*(s-a)*(s-b)*(s-c)); 
+ printf("Area of triangle is %f",area); 
+ } 
+ else 
+ { 
+ printf("Sum of two sides of a triangle must be greater than third side"); 
+ } 
+ getch(); 
+} 
+
+
+
+

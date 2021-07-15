@@ -1,0 +1,278 @@
+//Swikar Ramdam
+//PURBEI045
+// 1. WAP to read elements in an array (3x3) and calculate the sum and average of all elements.
+#include <stdio.h>
+int main()
+{
+    int a[3][3];
+    int i, j, sum = 0;
+    printf("Enter the elements:\n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+            sum = sum + a[i][j];
+        }
+    }
+        printf("Sum = %d", sum);
+        printf("Avg = %d",sum/9);
+    return 0;
+}
+// 2. WAP to read elements in an array (2x3) and calculate sum of rows.
+#include <stdio.h>
+int main()
+{
+    int a[2][3];
+    int i, j,sum;
+    printf("Enter the elements:\n");
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);            
+        }
+    }
+    for (i=0;i<2;i++){
+        sum = 0;
+        for(j=0;j<3;j++)
+        sum = sum + a[i][j];
+        printf("Sum of row %d is %d\n",i+1,sum);
+    }
+
+        return 0;
+    }
+// 3. WAP to read elements in an array (2x3) and calculate sum of column.
+#include <stdio.h>
+int main()
+{
+    int a[2][3];
+    int i, j,sum;
+    printf("Enter the elements:\n");
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);            
+        }
+    }
+    for (i=0;i<3;i++){
+        sum = 0;
+        for(j=0;j<2;j++)
+        sum = sum + a[j][i];
+        printf("Sum of column %d is %d\n",i+1,sum);
+    }
+
+        return 0;
+    }
+//4*. WAP to find the maximum number in an array (3x3) and replace all the elements with the 
+maximum.
+#include <stdio.h>
+int main()
+{
+    int a[3][3];
+    int i, j, max = 0;;
+    printf("Enter the elements:\n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+        for (i = 0; i < 3; i++)
+    {
+       
+        for (j = 0; j < 3; j++)
+        { 
+            if (a[i][j]>max)
+            max = a[i][j];
+        }
+        
+    }
+    printf("The maximum number in the array is \t%d",max);
+        for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            a[i][j] = max;
+        }
+    
+    }
+    printf(a[i][j]);
+    return 0;
+}
+
+// 5.WAP to read elements in an array (3x3) and calculate the sum of diagonal matrix.
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3], i, j, sum = 0;
+    printf("Enter the elements\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+             scanf("%d",&a[i][j]);
+        }
+    }
+    for (i=0;i<3;i++){
+        for (j=0;j<3;j++)
+        {
+            if (i==j){
+                sum+= a[i][j];
+            }
+        }
+    }
+    printf("Sum of diagonal matrix =\t%d",sum);
+    return 0;
+}
+//6.WAP to read elements in an array (3x3) and find the transpose of a matrix.
+#include <stdio.h>
+int main()
+{
+    int a[3][3], i, j;
+    printf("Enter the elements : \n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+    }
+    printf("Original matrix\n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf(" %d", a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Transpose matrix\n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf(" %d", a[j][i]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+//7.WAP to add two given matrices (3x3) and print the resultant matrix.
+#include <stdio.h>
+int main()
+{
+    int i, j, k, a[3][3], b[3][3], c[3][3];
+    for (k = 1; k < 3; k++)
+    {
+        printf("Enter the elements for matrix %d:\n",k);
+        for (i = 0; i < 3; i++)
+        {
+            for (j = 0; j < 3; j++)
+            {
+                if (k == 1)
+                {
+                    
+                    scanf("%d", &a[i][j]);
+                }
+                if (k == 2)
+                {
+                    scanf("%d", &b[i][j]);
+                }
+            }
+        }
+    }
+    printf("The sum of the two matrix gives the following resultant \n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            c[i][j] = a[i][j] + b[i][j];
+            printf(" %d", c[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+//8.WAP to multiply two given matrices (3x3) and print the resultant matrix
+#include <stdio.h>
+
+#include <stdio.h>
+int main()
+{
+    int i, j, k, a[3][3], b[3][3], c[3][3];
+    for (k = 1; k < 3; k++)
+    {
+        printf("Enter the elements for matrix %d:\n", k);
+        for (i = 0; i < 3; i++)
+        {
+            for (j = 0; j < 3; j++)
+            {
+                if (k == 1)
+                    scanf("%d", &a[i][j]);
+                if (k == 2)
+                    scanf("%d", &b[i][j]);
+            }
+        }
+    }
+
+    printf("The product of the two matrix is : \n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            c[i][j] = a[i][j] * b[i][j];
+            printf("  %d", c[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+int main()
+{
+    int  a[3][3], k, b[3][3], i, j, c[3][3];
+    for (k=1;k<3;k++)
+    {
+        printf("Enter the value for matrix %d\n",k);
+// since we are using two arrays if condition is necessary to have the separate elements for separate array
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+            {
+                if(k==1)
+                {
+                  printf("Enter a number : ");
+                  scanf("%d",&a[i][j]);
+                }
+                if(k==2)
+                 {
+                   printf("Enter a number : ");
+                   scanf("%d",&b[i][j]);
+                 }
+
+            }
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        for (j=0;j<3;j++){
+        for(k=0;k<3;k++)
+        {
+            c[i][k] = 0;
+            for(j=0;j<3;j++)
+                c[i][k] = (a[i][j]*b[j][k]);
+        }
+    }
+    }
+    printf("The resultant matrix is \n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        printf("%d ",c[i][j]);
+        printf("\n");
+    }
+    return 0;
+}

@@ -1,0 +1,311 @@
+Swikar Ramdam
+PURBEI077045
+//1.WAP to find the square of any number using the function.
+
+#include <stdio.h>
+float square(float x);
+
+int main()
+{
+	float m;
+	printf("Enter a number:\n");
+	scanf("%f",&m);
+	printf("Square of %f is %3f",m,square(m));
+	return 0;
+}
+float square(float x)
+{
+	return x * x;	
+}
+//2.WAP to swap two numbers using function. 
+
+#include <stdio.h>
+int swap(int s);
+int main(){
+   int  m,n;
+   printf("Enter the first and second number:\n");
+   scanf("%d %d",&m,&n);
+   printf("The swapped form is %d%d",swap(n),swap(m));
+   return 0;
+}
+int swap(int s){
+   return s;
+}
+int swap(int x)
+{
+	return x;
+}
+
+
+//3.WAP to check a given number is even or odd using the function.
+#include <stdio.h>
+int odd_even(int a);
+int main(){
+    int n;
+    printf("Enter a number:\n");
+    scanf("%d",&n);
+    odd_even(n);
+    return 0;
+
+}
+int odd_even(a){
+    if(a%2==0)
+    printf("Even");
+    else if(a%2!=0)
+    printf("odd");
+    return 0;
+}
+
+
+//4.WAP to read a +ve integer and find the sum of digits using function.
+
+#include<stdio.h>
+int rvrs(int x);
+
+int main()
+{
+	int n, a;
+	printf("Enter the number: ");
+	scanf("%d",&n);
+	a = rvrs(n);
+	printf("\nThe sum of the digit is %d",a);
+	return 0;
+}
+
+int rvrs(int x){
+   int i,rem,sum =0;
+   for(i=1; i>0;i++){
+      rem = x%10;
+      sum = sum + rem;
+      x= x/10;
+      if (x==0)
+      break;
+   }
+   return sum;
+}
+
+//5.WAP to find the factorial of a given number using function.
+
+#include <stdio.h>
+int main(){
+   int n;
+   printf("Enter the number:\n");
+   scanf("%d",&n);
+   printf("Factorial=%d",facto(n));
+}
+
+int facto(int f){
+   int m = 1;
+   for (f;f>0;f--){
+      m = m*f;
+   }
+    return m;  
+   }
+
+
+//6.WAP to convert a given lowercase letter to uppercase using function.
+
+#include<stdio.h>
+int low(int x);
+
+int main()
+{
+	char a, b;
+	printf("Enter an alphabet: ");
+	scanf("%c",&a);
+	b = low(a);
+	printf("The uppercase alphabet is %c",b);
+	return 0;
+}
+
+int low(int x)
+{
+	x -= 32;
+	return x;
+}
+
+
+//7.WAP to reverse a given number using function.
+
+#include<stdio.h>
+int rev(int x);
+
+int main()
+{
+	int n, a;
+	printf("Enter the number: ");
+	scanf("%d",&n);
+	a = rev(n);
+	printf("\nThe reverse of the number is %d",a);
+	return 0;
+}
+
+int rev(int x)
+{
+	int i, b, sum = 0;
+	for(i = 1;i>0;i++)
+	{
+		b = x % 10;
+		sum = sum * 10 + b;
+		x = x/10;
+		if (x == 0)
+		break;
+	}
+	return sum;
+}
+
+
+//8.WAP to find the HCF of two given numbers using function.
+
+#include<stdio.h>
+
+int hcf(int x, int y);
+
+int main()
+{
+    int a, b, c;
+    printf("Enter the numbers: ");
+    scanf("%d  \n %d",&a,&b);
+    c = hcf(a,b);
+    printf("The HCF is : %d",c);
+
+    return 0;
+}
+int hcf(int x, int y)
+{
+    int a, b, c;
+    a = x;
+    b = y;
+    while(b!=0)
+    {
+        c = b;
+        b = a % b;
+        a = c;
+    }
+    return a;
+}
+
+
+//9.WAP to find the LCM of two given numbers using function.
+
+#include<stdio.h>
+
+int hcf(int x, int y);
+
+int main()
+{
+    int a, b, c;
+    printf("Enter the numbers: ");
+    scanf("%d  \n %d",&a,&b);
+    c = hcf(a,b);
+    printf("The LCM is : %d",c);
+
+    return 0;
+}
+int hcf(int x, int y)
+{
+    int a, b, c;
+    a = x;
+    b = y;
+    while(b!=0)
+    {
+        c = b;
+        b = a % b;
+        a = c;
+    }
+    return (x*y)/a;
+}
+
+
+
+//10.WAP to find the value of one number raised to the power of another using function.
+
+#include<stdio.h>
+
+int raised(int x, int y);
+
+int main()
+{
+    int a, b, c;
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    printf("\nEnter the number to be raised by power:");
+    scanf("%d",&b);
+    c = raised(a,b);
+    printf("The final number is : %d",c);
+
+    return 0;
+}
+int raised(int x, int y)
+{
+    int a = 1;
+    for(y;y>0;y--)
+    a = a * x;
+
+    return a;
+}
+
+
+
+//11.WAP to convert decimal number to binary number using the function.
+#include<stdio.h>
+
+int binary(int x);
+
+int main()
+{
+    int a;
+    printf("Enter the decimal number: ");
+    scanf("%d",&a);
+    a = binary(a);
+    printf("The binary form is : %d",a);
+
+    return 0;
+}
+int binary(int x)
+{
+    int a = 0, b = 1;
+    while(x!=0)
+    {
+        a = a + b * (x%2);
+        x = x/2; 
+        b = b *10;
+    }
+
+    return a;
+}
+
+//12.WAP  to check whether a number is a prime number or not using the function.
+
+#include<stdio.h>
+
+int prime(int x);
+
+int main()
+{
+    int a;
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    a = prime(a);
+    if(a == 1)
+    printf("It's a Prime number.");
+    else 
+    printf("It's not a Prime number.");
+
+    return 0;
+}
+int prime(int x)
+{
+    int a, b = x, c = 0;
+    for(x = x-1;x>1;x--)
+    {
+        a = b % x;
+        if ( a == 0)
+        {
+            c = 1;
+            break;
+        }
+    }
+
+    return c;
+}

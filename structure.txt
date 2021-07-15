@@ -1,0 +1,334 @@
+Swikar Ramdam
+PURBEI077045
+
+//1
+// a
+#include <stdio.h>
+struct person
+{
+    char name[20];
+    int age;
+    char address[50];
+    int contact;
+};
+int main()
+{
+    struct person p;
+    printf("Enter your :\n");
+    printf("name:\n");
+    gets(p.name);
+    printf("age:\n");
+    scanf("%d", &p.age);
+    printf("address:\n");
+    scanf("%s",&p.address);
+    printf("contact:\n");
+    scanf("%d", &p.contact);
+
+    printf("name:%s\n", p.name);
+    printf("age:%d\n",p.age);
+    printf("address:%s\n", p.address);
+    printf("contact:%d\n", p.contact);
+}
+//b
+#include <stdio.h>
+struct employee
+{
+    int id;
+    char name[20];
+    char address[50];
+    int contact;
+    int doj;
+    int designation;
+    int salary;
+};
+int main()
+{
+    struct employee p;
+    printf("Please enter your \n");
+    printf("name:\n");
+    gets(p.name);
+    printf("address:\n");
+    gets(p.address);
+    printf("contact:\n");
+    scanf("%d", &p.contact);
+    printf("doj:\n");
+    scanf("%d", &p.doj);
+    printf("designation:\n");
+    scanf("%d", &p.designation);
+    printf("salary:\n");
+    scanf("%d", &p.salary);
+
+    printf("name:%s\n", p.name);
+    printf("address:%s\n", p.address);
+    printf("contact:%d\n", p.contact);
+    printf("doj:%d\n", p.doj);
+    printf("designation:%d\n", p.designation);
+    printf("salary:%d\n", p.salary);
+
+    return 0;
+}
+//c
+#include <stdio.h>
+struct customer
+{
+    int id;
+    char address[50];
+    int contact;
+ 
+};
+int main()
+{
+    struct customer p;
+    printf("Enter your :\n");
+    printf("id:\n");
+    printf("%d",&p.id);
+    printf("address:\n");
+    scanf("%s",&p.address);
+    printf("contact:\n");
+    scanf("%d", &p.contact);
+
+    printf("name:%d\n", p.id);
+    printf("address:%s\n", p.address);
+    printf("contact:%d\n", p.contact);
+}
+// d
+#include <stdio.h>
+struct item
+{
+    char name[20];
+    int code;
+    int price;
+ 
+};
+int main()
+{
+    struct item p;
+    printf("Please Enter:\n");
+    printf("name:\n");
+    gets(p.name);
+    printf("code:\n");
+    scanf("%d", &p.code);
+ 
+    printf("price:\n");
+    scanf("%d", &p.price);
+
+    printf("name:%s\n", p.name);
+    printf("code:%d\n",p.code);
+    printf("price:%d\n", p.price);
+}
+//e
+#include <stdio.h>
+struct author
+{
+    char id[20];//
+    char name[50];
+    int contact;
+    char email[50];
+    char gender[10];
+};
+int main()
+{
+    struct auuthor p;
+    printf("Enter your :\n");
+    printf("id:\n");
+    printf("%d",&p.id);
+    printf("name:\n");
+    scanf("%s", &p.name);
+    printf("email:\n");
+    scanf("%s",&p.email);
+    printf("contact:\n");
+    scanf("%d", &p.contact);
+    printf("gender:\n");
+    scanf("%s",&p.gender);
+
+    printf("id:%d\n", p.id);
+    printf("name:%s\n",p.name);
+    printf("email:%s\n", p.email);
+    printf("contact:%d\n", p.contact);
+    printf("gender:%s\n",p.gender);
+
+}
+//f
+#include <stdio.h>
+struct book
+{
+    char title[20]; //
+    char author[50];
+    char category[50];
+    int ISBN;
+    int pages;
+};
+int main()
+{
+
+    struct book p;
+    printf("Please Enter\n");
+    printf("title:\n");
+    gets(p.title);
+    printf("ISBN:\n");
+    scanf("%d", &p.ISBN);
+    printf("author:\n");
+    scanf("%s", &p.author);
+    printf("category:\n");
+    scanf("%s", &p.category);
+    printf("pages:\n");
+    scanf("%d", &p.pages);
+
+
+    printf("ISBN:%d\n", p.ISBN);
+    printf("title:%s\n", p.title);
+    printf("author:%s\n", p.author);
+    printf("category:%s\n", p.category);
+    printf("pages:%d\n", p.pages);
+}
+//g
+#include <stdio.h>
+struct account
+{
+    char id[20]; //
+    char name[50];
+    char actype[50];
+    int acno;
+    int balance;
+};
+int main()
+{
+
+    struct account p;
+    printf("Please Enter\n");
+    printf("id:\n");
+    printf("%d",&p.id);
+    printf("name:\n");
+    gets(p.name);
+    printf("actype:\n");
+    gets(p.actype);
+    printf("acno:\n");
+    scanf("%d", &p.acno);
+    printf("balance:\n");
+    scanf("%d", &p.balance);
+
+    printf("id:%d\n", p.id);
+    printf("name:%s\n", p.name);
+    printf("actype:%s\n", p.actype);
+    printf("acno:%d\n", p.acno);
+    printf("balance:%d\n", p.balance);
+}
+// h
+#include <stdio.h>
+struct point
+{
+    int x, y;
+};
+int main()
+{
+    struct point p1, p2;
+    printf("\n Enter x and y value for point 1: \n ");
+    scanf("%d %d", &p1.x, &p1.y);
+    printf("\n Enter x and y value for point 2: \n ");
+    scanf("%d %d", &p2.x, &p2.y);
+    printf("The points entered are:\n");
+    printf(" %4d %4d", p1.x,p2.y );
+    printf("  \n%4d %4d", p2.x,p2.y);
+
+    return 0;
+}
+//2
+#include<stdio.h>
+struct Complex
+{   float real;
+    float imag;
+};
+int main()
+
+{
+    struct Complex n1,n2,n3;
+    printf("Please enter\n");
+    printf("first real and imaginary parts:\n");
+    scanf("%f %f",&n1.real,&n1.imag);
+    printf("second real and imaginary parts:\n");
+    scanf("%f %f",&n2.real,&n2.imag);
+    n3.real = n1.real + n2.real;
+    n3.imag = n1.imag + n2.imag;
+
+    printf("The sum of %.2f %.2f \n",n3.real,n3.imag);
+
+
+    return 0;
+}
+//3
+#include <stdio.h>
+struct Date
+{
+    int day;
+    int month;
+    int year;
+};
+int main()
+
+{
+    struct Date d1, d2, d3;
+    printf("Please enter any two dates(day/month/year): \n");
+    printf("date 1\n");
+    scanf("%d %d %d", &d1.day, &d1.month, &d1.year);
+    printf("date 2\n");
+    scanf("%d %d %d", &d2.day, &d2.month, &d2.year);
+
+    d3.day = d1.day + d2.day;
+    d3.month = d1.month + d2.month;
+    d3.year = d1.year + d2.year;
+
+    printf("The sum of two dates give %d %2d %2d\n", d3.day, d3.month, d3.year);
+
+    return 0;
+}
+//4
+#include <stdio.h>
+struct Time
+{
+    int hours;
+    int minutes;
+    float seconds;
+};
+
+int main()
+
+{
+    struct Time t1, t2, t3;
+    printf("Please enter any two times(hours/minutes/seconds): \n");
+    printf("time 1\n");
+    scanf("%d %d %f", &t1.hours, &t1.minutes, &t1.seconds);
+    printf("time 2\n");
+    scanf("%d %d %f", &t2.hours, &t2.minutes, &t2.seconds);
+
+    t3.hours = t1.hours + t2.hours;
+    t3.minutes = t1.minutes + t2.minutes;
+    t3.seconds = t1.seconds + t2.seconds;
+
+    printf("The sum of two times give %d %2d %.2f\n", t3.hours, t3.minutes, t3.seconds);
+
+    return 0;
+}
+//5
+#include <stdio.h>
+struct Distance
+{
+    float feet;
+    float inches;
+};
+
+int main()
+
+{
+    struct Distance d1, d2, d3;
+    printf("Please enter any two times(feet/inch): \n");
+    printf("Distance 1\n");
+    scanf("%f %f", &d1.feet, &d1.inches);
+    printf("Distance 2\n");
+    scanf("%f %f", &d2.feet, &d2.inches);
+
+    d3.feet = d1.feet + d2.feet;
+    d3.inches = d1.inches + d2.inches;
+    printf("The sum of two Distances give %f %2f \n", d3.feet, d3.inches);
+
+    return 0;
+}

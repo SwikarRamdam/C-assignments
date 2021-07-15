@@ -1,0 +1,401 @@
+Swikar Ramdam
+BEI045
+
+/*1. Define a structure named Student having members name, rollno and marks in 5 subjects. WAP
+to read record of 10 students. Calculate total marks and percentage of each student and print 
+them.*/
+#include <stdio.h>
+
+struct marks
+{
+    int phy;
+    int C;
+    int Math;
+    int Bio;
+    int Chem;
+};
+struct student
+{
+    char name[30];
+    int rollno;
+    struct marks mks;
+};
+int main()
+{
+    struct student s[20];
+    int i, total_marks[20], percentage[20];
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("\nenter details of student %d" ,i+1);
+        printf("\nname:\n");
+        scanf("%s",s[i].name);
+        printf("rollno:\n");
+        scanf("%d", &s[i].rollno);
+        printf("marks obtained in phy:\n");
+        scanf("%d", &s[i].mks.phy);
+        printf("marks obtained in C:\n");
+        scanf("%d", &s[i].mks.C);
+        printf("marks obtained in Math:\n");
+        scanf("%d", &s[i].mks.Math);
+        printf("marks obtained in Bio:\n");
+        scanf("%d", &s[i].mks.Bio);
+        printf("marks obtained in Chem:\n");
+        scanf("%d", &s[i].mks.Chem);
+    }
+    for (i = 0; i < 10; i++)
+    {
+        total_marks[i] = s[i].mks.phy + s[i].mks.C + s[i].mks.Math + s[i].mks.Bio + s[i].mks.Chem;
+        percentage[i] = (total_marks[i]) / 5;
+    }
+    for (i = 0; i < 10; i++)
+    {
+        printf("\nName: %s", s[i].name);
+        printf("\nRollno: %d", s[i].rollno);
+        printf("\nTotal Marks: %d", total_marks[i]);
+        printf("\nTotal Percentage: %d", percentage[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+/*2. Define a structure name Employee having its member empid, name, address, and salary. WAP 
+to read record of 10 employees and 
+(a) Display record of all employees who live in 'DHARAN'.
+(b) Display record of all employees who does not live in 'DHARAN'.
+(c) Display record of all employees whose salary ranges between 15000 to 20000.
+(d) Display record of all employees after increasing the salaries of all employees by 10%.
+(e) Increase the salary by 10% of only those employees who lives in 'BIRATNAGAR' . 
+Display record of all employees.*/
+
+/*a
+#include <stdio.h>
+struct employee
+{
+    int empid;
+    char name[30];
+    char address[30];
+    int salary;
+};
+int main()
+{
+    struct employee e[10];
+    int i;
+    printf("Enter employee details\n");
+    for (i = 0; i < 10; i++)
+    {
+        printf("empid:\n");
+        scanf("%d", &e[i].empid);
+
+        printf("name:\n");
+        fflush(stdin);
+        gets(e[i].name);
+
+        printf("address:\n");
+        scanf("%s", e[i].address);
+
+        printf("salary:\n");
+        scanf("%d", &e[i].salary);
+    }
+
+        printf("\n\nEMPID \tNAME\tADDRESS\t\t\tSALARY");
+    // a
+    printf("\n===================================================\n");
+    printf("\nEmployees from Dharan\n");
+    for (i = 0;i<10;i++){
+        if(strcmp(e[i].address,"Dharan")==0)
+              printf("\n%d\t%s\t%s\t\t%d",e[i].empid,e[i].name,e[i].address,e[i].salary);
+    }
+    // b
+    printf("\nEmployees out of Dharan\n");
+    for (i = 0;i<10;i++){
+        if(strcmp(e[i].address,"Dharan")!=0)
+              printf("\n%d\t%s\t%s\t\t%d",e[i].empid,e[i].name,e[i].address,e[i].salary);
+
+    }
+                printf("\n");
+    return 0;
+}*/
+/*c#include <stdio.h>
+struct employee
+{
+    int empid;
+    char name[30];
+    char address[30];
+    int salary;
+};
+int main()
+{
+    struct employee e[10];
+    int i;
+    printf("Enter employee details\n");
+    for (i = 0; i < 10; i++)
+    {
+        printf("empid:\n");
+        scanf("%d", &e[i].empid);
+
+        printf("name:\n");
+        fflush(stdin);
+        gets(e[i].name);
+
+        printf("address:\n");
+        scanf("%s", e[i].address);
+
+        printf("salary:\n");
+        scanf("%d", &e[i].salary);
+    }
+
+        printf("\n\nEMPID \tNAME\tADDRESS\t\t\tSALARY");
+    printf("\n===================================================\n");
+    printf("\nEmployees earning salary ranging btw Rs.15-20K\n");
+    for (i = 0;i<10;i++){
+        if(e[i].salary>=15000 && e[i].salary<=20000)
+              printf("\n%d\t%s\t%s\t\t%d",e[i].empid,e[i].name,e[i].address,e[i].salary);
+    }
+        printf("\nEmployees earning salary ranging out of Rs.15-20K\n");
+    for (i = 0;i<10;i++){
+        if(e[i].salary<15000 || e[i].salary>20000)
+              printf("\n%d\t%s\t%s\t\t%d",e[i].empid,e[i].name,e[i].address,e[i].salary);
+    }
+
+       printf("\n");
+    return 0;
+}*/
+/*d
+#include <stdio.h>
+
+
+struct employee
+{
+    int empid;
+    char name[30];
+    char address[30];
+    int salary;
+};
+int main()
+{
+    struct employee e[10];
+    int i;
+    printf("Enter employee details\n");
+    for (i = 0; i < 10; i++)
+    {
+        printf("empid:\n");
+        scanf("%d", &e[i].empid);
+
+        printf("name:\n");
+        fflush(stdin);
+        gets(e[i].name);
+        // scanf("%s", e[i].name);
+
+        printf("address:\n");
+        scanf("%s", e[i].address);
+
+        printf("salary:\n");
+        scanf("%d", &e[i].salary);
+    }
+    for (i = 0;i<10;i++){
+        e[i].salary = e[i].salary+e[i].salary * 0.1;
+    }
+    printf("\n\nEMPID \tNAME\tADDRESS\t\t\tSALARY");
+    printf("\n===================================================\n");
+       for (i = 0;i<10;i++){
+           printf("\n%d\t%s\t%s\t\t%d",e[i].empid,e[i].name,e[i].address,e[i].salary);
+            printf("\n");
+       }
+    return 0;
+}*/
+/*e
+#include <stdio.h>
+
+
+struct employee
+{
+    int empid;
+    char name[30];
+    char address[30];
+    int salary;
+};
+int main()
+{
+    struct employee e[10];
+    int i;
+    printf("Enter employee details\n");
+    for (i = 0; i < 10; i++)
+    {
+        printf("empid:\n");
+        scanf("%d", &e[i].empid);
+
+        printf("name:\n");
+        fflush(stdin);
+        gets(e[i].name);
+        // scanf("%s", e[i].name);
+
+        printf("address:\n");
+        scanf("%s", e[i].address);
+
+        printf("salary:\n");
+        scanf("%d", &e[i].salary);
+    }
+    for (i = 0;i<10;i++){
+        if(strcmp(e[i].address,"Biratnagar")==0)
+        e[i].salary = e[i].salary+e[i].salary * 0.1;
+    }
+    printf("\n\nEMPID \tNAME\tADDRESS\t\t\tSALARY");
+    printf("\n===================================================\n");
+       for (i = 0;i<10;i++){
+           printf("\n%d\t%s\t%s\t\t%d",e[i].empid,e[i].name,e[i].address,e[i].salary);
+            printf("\n");
+       }
+    return 0;
+}*/
+
+
+/*3. Define a structure:
+Name(fname, mname, lastname)
+Person(age, contact, address)
+WAP to nest the structure Name within structure Person and read the record of 10 persons and 
+display it*/
+#include <stdio.h>
+
+struct name
+{
+    char fname[15], mname[15], lname[15];
+};
+
+struct person
+{
+
+    struct name name;
+    int age;
+    int contact;
+    char address[30];
+};
+int main()
+{
+    struct person p[20];
+    int i;
+    
+    for (i = 0; i < 10; i++)
+    {
+        printf("\nEnter details for person %d\n",i+1);
+        printf("first name:\n");
+        scanf("%s", p[i].name.fname);
+        printf("middle name:\n");
+        scanf("%s", p[i].name.mname);
+        printf("last name:\n");
+        scanf("%s", p[i].name.lname);
+        printf("age:\n");
+        scanf("%d",&p[i].age);
+        printf("address:\n");
+        scanf("%s",p[i].address);
+    }
+    for (i = 0; i < 10; i++)
+    {
+        printf("\nName : %s %s %s ", p[i].name.fname, p[i].name.mname, p[i].name.lname);
+        printf("\nAge: %d", p[i].age);
+        printf("\nAddress: %s", p[i].address);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+/**4. Define a structure name Complex with its member real and img. Write a user defined function 
+named addComplex() to add two given Complex numbers. The function should take two 
+Complex type arguments and also return Complex type. WAP to implement the UDF in main 
+program.*/
+#include<stdio.h>
+struct complex
+{
+    int x,y;
+};
+struct complex addComplex(complex,complex);
+int main(){
+    struct complex a1,a2,a3;
+    printf("\nnEnter real and imaginary value of complex1: ");
+    scanf("%d %d",&a1.x,&a1.y);
+    
+    printf("\nnEnter real and imaginary value of complex2: ");
+    scanf("%d %d",&a2.x,&a2.y);
+    a3 = addComplex(a1,a2);
+    printf("\nResult: %d+%di",a3.x,a3.y);
+    return 0;
+
+}
+struct complex addComplex(struct complex c1,struct complex c2){
+    struct complex c3;
+    c3.x = c1.x + c2.x;
+    c3.y = c1.y + c2.y;
+    return c3;
+}
+5. Define a structure name Time with its member hr, min and sec. Write a user defined function 
+named timeDiff() to calculate the difference between two time periods. The function should 
+take two Time type arguments and also return Time type. WAP to implement the UDF in main 
+program.
+#include <stdio.h>
+
+struct time
+{
+    int hr, min, sec;
+} time;
+struct time timeadd(time, time);
+int main()
+{
+    struct time a1, a2,a3;
+    printf("Enter times (hr/min/sec)");
+    printf("Enter time1:\n");
+    scanf("%d %d %d", &a1.hr, &a1.min, &a1.sec);
+    printf("Enter time2:\n");
+    scanf("%d %d %d", &a2.hr, &a2.min, &a2.sec);
+    a3 = timeadd(a1, a2);
+    printf("Result = %d %d %d",a3.hr,a3.min,a3.sec);
+}
+struct time timeadd(struct time t1, struct time t2)
+{
+    struct time temp;
+    temp.hr = t1.hr + t2.hr;
+    temp.min = t1.min + t2.min;
+    temp.sec = t1.sec + t2.sec;
+    return temp;
+
+}
+
+/* 6 Define a structure named Student having members name and rollno. WAP to read record of 10 
+students. Sort the students record in ascending order according to their roll numbers.*/
+#include <stdio.h>
+struct student
+{
+    char name[20];
+    int roll_no;
+};
+int main()
+{
+    struct student s[10], temp;
+    int i, j;
+    printf("Enter student's name and roll_no\n");
+    for (i = 0; i < 3; i++)
+    {
+        scanf("\n%s \n%d", s[i].name, &s[i].roll_no);
+    }
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (s[j].roll_no > s[j + 1].roll_no)
+            {
+                temp = s[j];
+                s[j] = s[j + 1];
+                s[j + 1] = temp;
+            }
+        }
+    }
+    printf("Students' record in order of their increasing roll_no\n");
+    printf("------------------------------------------------");
+    for (i = 0; i < 3; i++)
+    {
+
+        printf("\n%s %d\n", s[i].name, s[i].roll_no);
+    }
+
+    return 0;
+}
